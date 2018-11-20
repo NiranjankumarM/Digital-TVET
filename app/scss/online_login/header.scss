@@ -1,0 +1,26 @@
+header {
+    @extend .full-body;
+    height: 105px;
+    z-index: 4000;
+    position: fixed;
+    border-top: 6px solid $blue;
+
+    .login_header {
+        @extend .full-body;
+        height: 105px;
+
+        .login_logo {
+            @extend .full-body;
+            width: 40%;
+            left: 8%;
+            position: relative;
+            text-align: left;
+            padding: 1.8em 0;
+
+            img {
+                width: 180px;
+              //  height: 52px;
+            }
+        }
+    }
+}

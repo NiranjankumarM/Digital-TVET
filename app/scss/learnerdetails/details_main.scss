@@ -1,0 +1,201 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.course {
+  width: 98%!important;
+
+  &:first-of-type{
+    right: 4%!important;
+  }
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  left: 250px;
+  top: 0;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 45px 0 25px;
+
+  .trainertop_infocontainer {
+    @extend .full-body;
+    float: left;
+
+    .trainertop_inner {
+      @extend .full-body;
+      float: left;
+      width: 95%;
+      left: 2.5%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+      .trainer_container {
+        @extend .full-body;
+        float: left;
+        width: 95%;
+        left: 2.5%;
+        padding: 3% 0;
+
+        .trainer_left {
+          @extend .full-body;
+          float: left;
+          width: 15%;
+
+          .image {
+            @extend .full-body;
+            float: left;
+            margin-top: -45px;
+            width: 200px;
+            height: 150px;
+
+            img {
+              width: 100%;
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .trainer_center {
+          @extend .full-body;
+          float: left;
+          width: 60%;
+          left: 5%;
+
+          h1 {
+            @extend .font-styles;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            @extend .disable-select;
+            float: left;
+
+            span {
+              font-size: 13px;
+            }
+          }
+
+          .titlee {
+            width: 100%;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 12.5px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            margin-right: 30px;
+            @extend .disable-select;
+            float: left;
+          }
+
+          .bot {
+            @extend .full-body;
+            float: left;
+
+            .blue{
+              border:  1.5px solid $blue;
+              padding: 8px 15px;
+              border-radius: 5px;
+              font-size: 12.5px!important;
+margin-top: 15px;
+            }
+
+            p {
+              @extend .font-styles;
+              font-family: 'Muli', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              margin-right: 30px;
+              @extend .disable-select;
+              float: left;
+
+              span {
+                margin-right: 10px;
+
+                img {
+                  width: 16px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+         @include tab{
+          .trainer_center{
+            width: 75%;
+            left: 15%;
+          }
+        }
+
+        .trainer_right {
+          @extend .full-body;
+          float: left;
+          width: 25%;
+
+          .green {
+            background-color: $green !important;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+            color: #fff !important;
+            border: none!important;
+          }
+
+          .btn {
+            @extend .font-styles;
+            display: inline-block;
+            font-family: 'Proxima_Nova',sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.6px;
+            padding: 10px 25px;
+            margin-right: 1.2em;
+            margin-top: 20px;
+            float: left;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 100px;
+            border: 1.5px solid #999;
+          }
+        }
+        @include tab{
+          .trainer_right{
+            width: 100%;
+            //left: 15%;
+          }
+        }
+      }
+    }
+  }
+    @include tab{
+    .trainertop_infocontainer{
+      margin-top: 20px;
+    }
+  }
+
+  @include ipadp{
+    .trainertop_infocontainer{
+      margin-top: 30px;
+    }
+  }
+}
+@include ipadp{
+  .main_dashboardcontainer{
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

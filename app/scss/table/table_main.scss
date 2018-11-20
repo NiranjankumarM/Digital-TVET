@@ -1,0 +1,306 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  left: 250px;
+  height: auto;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 35px 0 25px;
+
+  .dashboard_graphbox {
+    @extend .full-body;
+    float: left;
+
+    .over {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 250px;
+      background-color: $dark-blue;
+    }
+
+    .vieww{
+      background-color: $green;
+      font-family: 'Proxima_Nova',sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      text-align: center;
+      color: #fff;
+      letter-spacing: 0.6px;
+      padding: 5px 15px;border-radius: 5px;
+    }
+
+    .graph_content {
+      @extend .full-body;
+      width: calc(100% - 30px);
+      left: 15px;
+      //    margin: 25px 0 0;
+      border-radius: 5px;
+      //box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+      float: left;
+      height: auto;
+
+      .graph_wrapper {
+        @extend .full-body;
+        float: left;
+        width: 97%;
+        left: 1.5%;
+
+        .graph_holder {
+          float: left;
+          position: relative;
+          margin: auto;
+          width: 100%;
+          margin-top: 20px;
+          @extend .disable-select;
+        }
+        @include ipadp {
+          .graph_holder {
+            width: 100%;
+          }
+        }
+
+        .graph_infodetails {
+          float: left;
+          position: relative;
+          margin: auto;
+          width: 100%;
+          @extend .disable-select;
+          // height: 300px;
+          .graph_head {
+            @extend .full-body;
+            float: left;
+            margin-bottom: 10px;
+
+            .in {
+              @extend .full-body;
+              float: left;
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #d3d3d3;
+
+              .green {
+                background-color: $green !important;
+                box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+                color: #fff !important;
+                border: none!important;
+              }
+
+              .btn {
+                @extend .font-styles;
+                display: inline-block;
+                font-family: 'Proxima_Nova',sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                text-align: left;
+                color: #000;
+                letter-spacing: 0.6px;
+                padding: 10px 25px;
+                margin-right: 1.2em;
+                margin-top: 5px;
+                float: right;
+                cursor: pointer;
+                outline: 0;
+                background-color: #fff;
+                border-radius: 100px;
+                border: 1.5px solid #999;
+              }
+            }
+
+            h1 {
+              display: inline-block;
+              @extend .font-styles;
+              font-family: 'Proxima_Nova', sans-serif;
+              font-size: 18px;
+              font-weight: 600;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              @extend .disable-select;
+              float: left;
+            }
+
+            .option {
+              //    @extend .full-body;
+              float: left;
+              list-style-type: none;
+              margin: 0.5em 0;
+              padding: 0;
+
+              li {
+                list-style: none;
+                display: inline-block;
+                font-family: 'Proxima_Nova', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                float: left;
+                color: #000;
+                letter-spacing: 0.6px;
+                padding: 0 0 0.25em;
+                margin: 0 1em;
+                @extend .disable-select;
+                opacity: 0.65;
+                cursor: pointer;
+
+                &:first-of-type {
+                  margin-left: 0;
+                }
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+
+              .line {
+                position: relative;
+                float: left;
+                //  margin-top: 10px;
+              }
+
+              .activee {
+                opacity: 1 !important;
+                // border-bottom: 1.5px solid $blue;
+              }
+            }
+          }
+
+          .course {
+            @extend .full-body;
+            float: left;
+            border-radius: 5px;
+            height: auto;
+
+            div.dataTables_wrapper {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            #regg_info {
+              display: none;
+            }
+
+            table {
+              background-color: #fff;
+              border-radius: 5px;
+              margin-top: 15px;
+
+              td {
+                font-family: 'muli', sans-serif;
+                font-size: 12.5px;
+                font-weight: 400;
+                color: #000;
+                letter-spacing: 0.6px;
+                padding:18px;
+                line-height: 2;
+
+                .status{
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 100%;
+                  position: relative;
+                  float: left;
+                  margin-top: 8px;
+                  margin-right: 5px;
+                }
+
+                .green{
+                  background-color: $green;
+                }
+
+                .red{
+                  background-color: red;
+                }
+              }
+
+              thead {
+                background-color: #fff;
+                border-radius: 5px;
+                font-family: 'Proxima_Nova', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: #000;
+                border: 1px solid #d3d3d3;
+                letter-spacing: 0.6px;
+
+                th {
+                  padding: 18px;
+                }
+              }
+            }
+
+            .dataTables_paginate {
+              font-family: 'Proxima_Nova', sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              color: #000;
+              letter-spacing: 0.6px;
+
+              .ui-button {
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                padding: 10px;
+                background-color: #fff;
+              }
+
+              .ui-state-disabled {
+                background-color: $green;
+                border: none;
+                color: #fff;
+              }
+
+              #regg_next,
+              #regg_previous {
+                border: none!important;
+                background-color:none!important;
+              }
+            }
+
+            .dataTables_filter,
+            .dataTables_length {
+              label {
+                font-family: 'Proxima_Nova', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                float: left;
+                color: #000;
+                letter-spacing: 0.6px;
+              }
+
+              input,
+              select {
+                font-family: 'muli', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: #000;
+                letter-spacing: 0.6px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 5px;
+                outline: 0;
+              }
+            }
+          }
+        }
+        @include ipadp {
+          .graph_infodetails {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@include ipadp{
+  .main_dashboardcontainer{
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

@@ -1,0 +1,16 @@
+@import "preset";
+@import "mixins"; //@import "cloud_main/main_header";
+@import "header";
+
+section {
+  top: 80px;
+  padding-bottom: 25px;
+  background-color: $back-blue;
+}
+
+
+
+
+
+@import "cloud_main/main_aside";
+@import "coursedetails/details_main";

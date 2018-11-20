@@ -1,0 +1,25 @@
+@import "preset";
+@import "mixins";
+//@import "cloud_main/main_header";
+
+@import "header";
+
+
+
+
+
+section{
+  top: 80px;
+  padding-bottom: 25px;
+    background-color: $back-blue;
+}
+
+
+/*#main_wrapper {
+  float: left;
+  @extend .full-body;
+  height: 100vh;
+  z-index: 0;*/
+  @import "cloud_main/main_aside";
+  @import "table/table_main";
+/*}*/

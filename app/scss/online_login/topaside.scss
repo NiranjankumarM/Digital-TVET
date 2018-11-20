@@ -1,0 +1,150 @@
+.main_asidecontainer {
+    @extend .full-body;
+    width: 250px;
+    float: left;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(18,83,164,0.25);
+    position: fixed;
+
+    .aside_container {
+        @extend .full-body;
+        float: left;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+
+        .bottom {
+            @extend .full-body;
+            position: absolute;
+            height: 50px;
+            background-color: #f8f8f8;
+            bottom: 0 !important;
+            top: auto !important;
+
+            a {
+                @extend .full-body;
+                width: 90%;
+                left: 10%;
+                @extend .font-styles;
+                font-family: 'josefin sans', sans-serif;
+                //  text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 600;
+                text-align: left;
+                color: #1173ff;
+                letter-spacing: 0.65px;
+                padding: 1.2em 0;
+                @extend .disable-select;
+
+                svg {
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    opacity: 0.85;
+                    fill: #1173ff;
+                }
+            }
+        }
+
+        .soft_nav {
+            @extend .full-body;
+            width: 100%;
+
+            .highlight {
+                opacity: 1 !important;
+            }
+
+            li {
+                @extend .full-body;
+                width: 100%;
+                list-style-type: none;
+                opacity: 0.75;
+
+                .dash {
+                    padding-top: 2em !important;
+                }
+
+                a {
+                    @extend .full-body;
+                    width: 90%;
+                    left: 10%;
+                    @extend .font-styles;
+                    font-family: 'roboto', sans-serif;
+                    font-size: 13.5px;
+                    font-weight: 500;
+                    text-align: left;
+                    color: #000;
+                    letter-spacing: 0.5px;
+                    padding: 1em 0;
+                    @extend .disable-select;
+                    vertical-align: middle;
+                    cursor: pointer;
+
+                    svg {
+                        margin-right: 10px;
+                    }
+
+                    span,
+                    svg {
+                        vertical-align: baseline;
+                    }
+
+                    .arrow {
+                        transform: rotate(90deg);
+                        vertical-align: middle;
+                        right: 7%;
+                        top: 19px;
+                        position: absolute;
+                    }
+                }
+
+                .order_submenu,
+                .sales_submenu {
+                    @extend .full-body;
+                    width: 100%;
+                    display: none;
+
+                    li {
+                        @extend .full-body;
+                        width: 100%;
+                        list-style-type: none;
+
+                        a {
+                            @extend .full-body;
+                            width: 90%;
+                            left: 12%;
+                            @extend .font-styles;
+                            font-family: 'roboto', sans-serif;
+                            font-size: 13px;
+                            font-weight: 500;
+                            text-align: left;
+                            color: #000;
+                            letter-spacing: 0.5px;
+                            padding: 1em 0;
+                            @extend .disable-select;
+                            vertical-align: middle;
+                            cursor: pointer;
+
+                            svg {
+                                margin-right: 10px;
+                            }
+
+                            span,
+                            svg {
+                                vertical-align: middle;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #f0f6ff;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

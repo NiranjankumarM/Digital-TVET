@@ -1,0 +1,107 @@
+header {
+    @extend .full-body;
+    height: 80px;
+    z-index: 4000;
+    position: fixed;
+    float: left;
+
+    .login_header {
+        @extend .full-body;
+        height: 80px;
+        float: left;
+
+        .login_logo {
+            @extend .full-body;
+            width: 250px;
+            left: 0;
+            position: relative;
+            text-align: center;
+            padding: 0.75em 0;
+            background-color: #f8f8f8;
+            float: left;
+
+            img {
+                width: 180px;
+                height: 52px;
+            }
+        }
+
+        .placeholder_container {
+            @extend .full-body;
+            float: left;
+            width: calc(100% - 250px);
+            height: 80px;
+            background-color: #1173ff;
+            box-shadow: 0 3px 6px 0 rgba(18,83,164,0.25);
+
+            .placeholder_txt {
+                @extend .full-body;
+                width: 90%;
+                left: 5%;
+                float: left;
+
+                li {
+                    list-style-type: none;
+                }
+
+                .label_holder {
+                    @extend .full-body;
+                    float: left;
+                    width: 35%;
+
+                    h1 {
+                        @extend .font-styles;
+                        font-family: 'Josefin Sans', sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-align: left;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        padding: 1.85em 0;
+                        @extend .disable-select;
+                    }
+                }
+
+                .client_holder {
+                    float: right;
+                    padding: 0;
+                    margin: 0;
+
+                    .txt {
+                        @extend .full-body;
+                        float: left;
+
+                        .user_image {
+                            width: 50px;
+                            height: 50px;
+                            background-color: #eee;
+                            border-radius: 50px;
+                            background-image: url("../../../media/online/logo1.jpg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            float: left;
+                            margin: 1em;
+                        }
+
+                        span {
+                            float: left;
+                            @extend .font-styles;
+                            font-family: 'Josefin Sans', sans-serif;
+                            font-size: 16px;
+                            font-weight: 500;
+                            text-align: center;
+                            color: #fff;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+                            @extend .disable-select;
+                            margin: 1.9em 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

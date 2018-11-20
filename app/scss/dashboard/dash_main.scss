@@ -1,0 +1,435 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  height: auto;
+  left: 250px;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 35px 0 25px;
+
+  .dashboard_graphbox {
+    @extend .full-body;
+    float: left;
+
+    .over {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 250px;
+      background-color: $dark-blue;
+    }
+
+    .graph_content {
+      @extend .full-body;
+      width: calc(100% - 30px);
+      left: 15px;
+      //    margin: 25px 0 0;
+      border-radius: 5px;
+      //box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+      float: left;
+      height: auto;
+
+      .graph_wrapper {
+        @extend .full-body;
+        float: left;
+        width: 97%;
+        left: 1.5%;
+
+        .graph_holder {
+          float: left;
+          position: relative;
+          margin: auto;
+          width: 42.5%;
+          left: 3.5%;
+          margin-top: 20px;
+          @extend .disable-select;
+
+          .graph_head {
+            @extend .full-body;
+            float: left;
+            margin-bottom: 10px;
+
+            h1 {
+              @extend .font-styles;
+              display: inline-block;
+              font-family: 'Proxima_Nova', sans-serif;
+              font-size: 18px;
+              font-weight: 600;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              @extend .disable-select;
+              float: left;
+            }
+          }
+
+          .graph_cart {
+            @extend .full-body;
+            float: left;
+            height: 350px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px 0 rgba(18,83,164,.25);
+
+            h1 {
+              @extend .font-styles;
+              display: inline-block;
+              font-family: 'Muli', sans-serif;
+              font-size: 12.5px;
+              font-weight: 700;
+              text-align: center;
+              color: #000;
+              margin-bottom: 15px;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              @extend .disable-select;
+              //float: left;
+            }
+          }
+          @include tab{
+            .graph_cart{
+              height: auto;
+            }
+          }
+        }
+        @include tab {
+          .graph_holder {
+            width: 93%;
+            left: 0;
+          }
+        }
+
+        .graph_infodetails {
+          float: left;
+          position: relative;
+          margin: auto;
+          width: 50%;
+          @extend .disable-select;
+          // height: 300px;
+          margin-top: 25px;
+
+          .graph_head {
+            @extend .full-body;
+            float: left;
+            margin-bottom: 10px;
+
+            h1 {
+              @extend .font-styles;
+              display: inline-block;
+              font-family: 'Proxima_Nova', sans-serif;
+              font-size: 18px;
+              font-weight: 600;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              @extend .disable-select;
+              float: left;
+            }
+          }
+
+          .course {
+            @extend .full-body;
+            float: left;
+            border-radius: 5px;
+            padding: 25px 0;
+            height: 335px;
+            overflow-y: scroll;
+            background-color: #fff;
+            box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+            .course_scroll {
+              @extend .full-body;
+              float: left;
+
+              .course_inner {
+                @extend .full-body;
+                float: left;
+                border-bottom: 1px solid #bbb;
+
+                .course_con {
+                  @extend .full-body;
+                  float: left;
+                  width: 90%;
+                  left: 5%;
+
+                  .course_right {
+                    @extend .full-body;
+                    float: left;
+                    width: 20%;
+                    padding-top: 15px;
+
+                    img {
+                      width: 13px;
+                      vertical-align: middle;
+                    }
+                    @include tab{
+                      img{
+                        float: left;
+                      }
+                    }
+
+                    p {
+                      @extend .font-styles;
+                      display: inline-block;
+                      font-family: 'Muli', sans-serif;
+                      font-size: 10px;
+                      font-weight: 600;
+                      text-align: left;
+                      color: #000;
+                      letter-spacing: 0.6px;
+                    }
+                    @include tab{
+                      p{
+                      margin-top: 7px;
+                    }
+                    }
+                    @include ipadp{
+                      p{
+                        vertical-align: text-top;
+                        margin-top: 0;
+                        margin-left: 1px;
+                      }
+                    }
+                  }
+
+                  .course_left {
+                    @extend .full-body;
+                    float: left;
+                    width: 80%;
+
+                    h1 {
+                      width: 100%;
+                      @extend .font-styles;
+                      display: inline-block;
+                      font-family: 'Proxima_Nova', sans-serif;
+                      font-size: 14px;
+                      font-weight: 600;
+                      text-align: left;
+                      color: #000;
+                      letter-spacing: 0.6px;
+                      padding: 1em 0 0.5em;
+                      @extend .disable-select;
+                      float: left;
+                    }
+
+                    p {
+                      @extend .font-styles;
+                      display: inline-block;
+                      font-family: 'Muli', sans-serif;
+                      font-size: 11px;
+                      font-weight: 500;
+                      text-align: left;
+                      color: #000;
+                      letter-spacing: 0.6px;
+                      padding: 1em 0 0.5em;
+                      @extend .disable-select;
+                      float: left;
+                    }
+
+                    .buttons {
+                      @extend .full-body;
+                      float: left;
+                      padding: 20px 0;
+
+                      .pen {
+                        background-color: $green !important;
+                        color: #fff !important;
+                        border: none !important;
+                        box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+                      }
+
+                      .btn {
+                        @extend .font-styles;
+                        display: inline-block;
+                        font-family: 'Muli', sans-serif;
+                        font-size: 10px;
+                        font-weight: 500;
+                        text-align: left;
+                        color: #000;
+                        letter-spacing: 0.6px;
+                        padding: 8px 12px;
+                        margin-right: 1.2em;
+                        @extend .disable-select;
+                        float: left;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border-radius: 100px;
+                        border: 1px solid #bbb;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .txt {
+            @extend .full-body;
+            float: left;
+            widows: 50%;
+            padding: 10px 0 0;
+
+            h2 {
+              width: 80%;
+              left: 8%;
+              position: relative;
+              @extend .font-styles;
+              display: inline-block;
+              font-family: 'Open sans', sans-serif;
+              font-size: 11px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.6px;
+              padding: 0.8em 0 0.5em;
+              margin-left: 1em;
+              @extend .disable-select;
+              float: left;
+
+              .box {
+                width: 10px;
+                height: 10px;
+                border-radius: 2.5px;
+                background-color: $blue;
+                border: 1px solid $ip_bod;
+                float: left !important;
+                margin: 2px 10px 0 0;
+              }
+
+              .gray {
+                background-color: #f5f5f5;
+              }
+
+              span {
+                color: $blue;
+                font-weight: 600;
+                float: right;
+              }
+
+              a {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        @include tab {
+          .graph_infodetails {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .dash_infocontainer {
+      @extend .full-body;
+      float: left;
+      width: 97%;
+      left: 1.5%;
+      margin: 15px 0 0;
+
+      .dash_infobox_one {
+        margin-left: 15px;
+      }
+
+      .infobox {
+        @extend .full-body;
+        float: left;
+        width: calc(25% - 20px);
+        left: 0;
+        margin-right: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+        padding: 3% 0;
+        cursor: pointer;
+
+        &:hover{
+          box-shadow: 0 10px 20px 0 rgba(18,83,164,0.25);
+        }
+
+        .image {
+          @extend .full-body;
+          float: left;
+          width: 30%;
+          left: 10%;
+
+          img {
+            width: 40px;
+            opacity: 0.55;
+          }
+        }
+
+        .txt {
+          width: 50%;
+          left: 10%;
+          @extend .full-body;
+          float: left;
+
+          h2 {
+            width: 90%;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.6px;
+            @extend .disable-select;
+          }
+
+          p {
+            width: 100%;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            text-align: left;
+            color: #000;
+            padding: 5px 0 10px;
+            letter-spacing: 0.6px;
+            @extend .disable-select;
+
+            span {
+              color: $blue;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      @include tab{
+        .infobox{
+          height: 80px;
+        }
+      }
+      @include ipadp {
+        .infobox {
+          width: 45%;
+          left: 2.5%;
+          margin: 20px 5px 0;
+        }
+      }
+    }
+    @include ipadp{
+      .dash_infocontainer{
+        margin:50px 0 0;
+      }
+    }
+  }
+}
+@include ipadp{
+  .main_dashboardcontainer{
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

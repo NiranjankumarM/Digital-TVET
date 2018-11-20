@@ -1,0 +1,443 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  left: 250px;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 45px 0 25px;
+
+  .trainertop_infocontainer {
+    @extend .full-body;
+    float: left;
+
+    .trainertop_inner {
+      @extend .full-body;
+      float: left;
+      width: 95%;
+      left: 2.5%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+      .trainer_container {
+        @extend .full-body;
+        float: left;
+        width: 95%;
+        left: 2.5%;
+        padding: 3% 0;
+
+        .trainer_left {
+          @extend .full-body;
+          float: left;
+          width: 15%;
+
+          .image {
+            @extend .full-body;
+            float: left;
+            margin-top: -45px;
+            width: 200px;
+            height: 150px;
+
+            img {
+              width: 100%;
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .trainer_center {
+          @extend .full-body;
+          float: left;
+          width: 60%;
+          left: 5%;
+
+          h1 {
+            @extend .font-styles;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            @extend .disable-select;
+            float: left;
+
+            span {
+              font-size: 13px;
+            }
+          }
+
+          .titlee {
+            width: 100%;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 12.5px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            margin-right: 30px;
+            @extend .disable-select;
+            float: left;
+          }
+
+          .bot {
+            @extend .full-body;
+            float: left;
+
+            p {
+              @extend .font-styles;
+              font-family: 'Muli', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              margin-right: 30px;
+              @extend .disable-select;
+              float: left;
+
+              span {
+                margin-right: 10px;
+
+                img {
+                  width: 16px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+        @include tab {
+          .trainer_center {
+            width: 55%;
+            left: 15%;
+          }
+        }
+
+        .trainer_right {
+          @extend .full-body;
+          float: left;
+          width: 25%;
+
+          .green {
+            background-color: $green !important;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+            color: #fff !important;
+            border: none!important;
+          }
+
+          .btn {
+            @extend .font-styles;
+            display: inline-block;
+            font-family: 'Proxima_Nova',sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.6px;
+            padding: 10px 25px;
+            margin-right: 1.2em;
+            margin-top: 20px;
+            float: left;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 100px;
+            border: 1.5px solid #999;
+          }
+        }
+        @include tab {
+          .trainer_right {
+            width: 100%;
+            //float: right;
+            //left: 15%;
+          }
+        }
+      }
+    }
+  }
+  @include tab {
+    .trainertop_infocontainer {
+      margin-top: 20px;
+    }
+  }
+  @include ipadp {
+    .trainertop_infocontainer {
+      margin-top: 30px;
+    }
+  }
+
+  .graph_head {
+    @extend .full-body;
+    float: left;
+    width: 95%;
+    left: 2.5%;
+    margin-top: 15px;
+
+    .option {
+      //    @extend .full-body;
+      float: left;
+      list-style-type: none;
+      margin: 0.5em 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        float: left;
+        color: #000;
+        letter-spacing: 0.6px;
+        padding: 0 0 0.25em;
+        margin: 0 1em;
+        @extend .disable-select;
+        opacity: 0.65;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .line {
+        position: relative;
+        float: left;
+        //  margin-top: 10px;
+      }
+
+      .activee {
+        opacity: 1 !important;
+        // border-bottom: 1.5px solid $blue;
+      }
+    }
+  }
+
+  .trainerbottom_container {
+    @extend .full-body;
+    float: left;
+    margin-top: 15px;
+
+    .trainerbottom_inner {
+      @extend .full-body;
+      float: left;
+      width: 95%;
+      left: 2.5%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+      .trainer_container {
+        @extend .full-body;
+        float: left;
+        width: 95%;
+        left: 2.5%;
+        padding: 20px 0;
+
+        .trainer_left {
+          @extend .full-body;
+          float: left;
+          width: 20%;
+
+          .image {
+            @extend .full-body;
+            float: left;
+
+            .circle {
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              bottom: -2px;
+              right: -2px;
+              border-radius: 100%;
+              border: 3px solid #fff;
+            }
+
+            .online {
+              background-color: $green;
+            }
+
+            .offline {
+              background-color: red;
+            }
+
+            img {
+              width: 100%;
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .trainer_center {
+          @extend .full-body;
+          float: left;
+          width: 55%;
+          left: 5%;
+
+          h1 {
+            @extend .font-styles;
+            width: 50%;
+            line-height: 1.5;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: left;
+            color: $dark-blue;
+            //letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            @extend .disable-select;
+            float: left;
+
+            &:after {
+              display: block;
+              width: 60px;
+              height: 0;
+              border-bottom: 2px solid;
+              content: "";
+              color: $blue;
+              margin: 5% 0 0;
+              position: relative;
+              text-align: center;
+            }
+          }
+          @include ipadp {
+            h1 {
+              font-size: 18px;
+            }
+          }
+
+          .bot {
+            @extend .full-body;
+            float: left;
+
+            p {
+              @extend .font-styles;
+              width: 50%;
+              line-height: 1.5;
+              font-family: 'Muli', sans-serif;
+              font-size: 12.5px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              margin-right: 30px;
+              @extend .disable-select;
+            }
+
+            .blue {
+              background-color: $blue !important;
+              color: #fff !important;
+            }
+
+            .detbtn {
+              @extend .font-styles;
+              display: inline-block;
+              font-family: 'Muli',sans-serif;
+              font-size: 12px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.6px;
+              padding: 8px 18px;
+              margin-right: 1.2em;
+              margin-top: 20px;
+              float: left;
+              cursor: pointer;
+              background-color: #fff;
+              border-radius: 6px;
+              border: 1.5px solid $blue;
+            }
+          }
+        }
+        @include tab {
+          .trainer_center {
+            width: 75%;
+            left: 5%;
+          }
+        }
+
+        .trainer_right {
+          @extend .full-body;
+          float: left;
+          width: 23%;
+          border-left: 1.5px solid #bbb;
+          padding: 5px 0 15px;
+
+          .right_top {
+            @extend .full-body;
+            float: left;
+            width: 90%;
+            left: 8%;
+
+            h1 {
+              @extend .font-styles;
+              font-family: 'Proxima_Nova',sans-serif;
+              font-size: 11.5px;
+              text-transform: uppercase;
+              font-weight: 700;
+              text-align: left;
+              color: #000;
+              margin: 15px 0;
+              letter-spacing: 0.6px;
+            }
+
+            .images {
+              @extend .full-body;
+              float: left;
+
+              .image {
+                margin: 0 25px 0 0;
+                padding: 0;
+                float: left;
+
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 100px;
+                }
+              }
+              @include tab {
+                .image {
+                  margin: 0 20px 5px 0;
+                }
+              }
+            }
+          }
+          @include ipadp {
+            .right_top {
+              width: 45%;
+              left: 5%;
+            }
+          }
+        }
+        @include tab {
+          .trainer_right {
+            width: 100%;
+            margin-top: 25px;
+            padding-top: 5px;
+            border-top: 1.5px solid #bbb;
+            border-left: 0;
+            //left: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+@include ipadp {
+  .main_dashboardcontainer {
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

@@ -1,0 +1,597 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.hide {
+  display: none;
+}
+
+.course {
+  width: 98%!important;
+
+  &:first-of-type {
+    right: 4%!important;
+  }
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  left: 250px;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 45px 0 25px;
+
+  .trainertop_infocontainer {
+    @extend .full-body;
+    float: left;
+
+    .trainertop_inner {
+      @extend .full-body;
+      float: left;
+      width: 95%;
+      left: 2.5%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+      .trainer_container {
+        @extend .full-body;
+        float: left;
+        width: 95%;
+        left: 2.5%;
+        padding: 3% 0;
+
+        .trainer_left {
+          @extend .full-body;
+          float: left;
+          width: 15%;
+
+          .image {
+            @extend .full-body;
+            float: left;
+            margin-top: -45px;
+            width: 200px;
+
+            .circle {
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              bottom: -2px;
+              right: -2px;
+              border-radius: 100%;
+              border: 3px solid #fff;
+            }
+
+            .online {
+              background-color: $green;
+            }
+
+            .offline {
+              background-color: red;
+            }
+
+            img {
+              width: 100%;
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .trainer_center {
+          @extend .full-body;
+          float: left;
+          width: 60%;
+          left: 5%;
+
+          h1 {
+            @extend .font-styles;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            @extend .disable-select;
+            float: left;
+
+            span {
+              font-size: 13px;
+            }
+          }
+
+          .titlee {
+            width: 100%;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 12.5px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            margin-right: 30px;
+            @extend .disable-select;
+            float: left;
+          }
+
+          .bot {
+            @extend .full-body;
+            float: left;
+
+            .blue {
+              border: 1.5px solid $blue;
+              padding: 8px 15px;
+              border-radius: 5px;
+              font-size: 12.5px!important;
+              margin-top: 15px;
+            }
+
+            p {
+              @extend .font-styles;
+              font-family: 'Muli', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: left;
+              color: #000;
+              letter-spacing: 0.8px;
+              padding: 1em 0 0.5em;
+              margin-right: 30px;
+              @extend .disable-select;
+              float: left;
+
+              span {
+                margin-right: 10px;
+
+                img {
+                  width: 16px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+        @include tab{
+          .trainer_center{
+            width: 55%;
+            left: 15%;
+          }
+        }
+         @include ipadp{
+          .trainer_center{
+            width: 55%;
+            left: 30%;
+          }
+        }
+
+        .trainer_right {
+          @extend .full-body;
+          float: left;
+          width: 25%;
+
+          .green {
+            background-color: $green !important;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+            color: #fff !important;
+            border: none!important;
+          }
+
+          .btn {
+            @extend .font-styles;
+            display: inline-block;
+            font-family: 'Proxima_Nova',sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.6px;
+            padding: 10px 25px;
+            margin-right: 1.2em;
+            margin-top: 20px;
+            float: left;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 100px;
+            border: 1.5px solid #999;
+          }
+        }
+        @include tab{
+          .trainer_right{
+            width: 15%;
+            left: 15%;
+          }
+        }
+          @include ipadp{
+          .trainer_right{
+            width: 55%;
+            left: 45%;
+          }
+        }
+      }
+    }
+  }
+  @include tab{
+    .trainertop_infocontainer{
+      margin-top: 30px;
+    }
+  }
+
+  .graph_content {
+    @extend .full-body;
+    width: calc(100% - 30px);
+    left: 15px;
+    //    margin: 25px 0 0;
+    border-radius: 5px;
+    //box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+    float: left;
+
+    .graph_wrapper {
+      @extend .full-body;
+      float: left;
+      width: 97%;
+      left: 1.5%;
+
+      .graph_infodetails {
+        float: left;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        @extend .disable-select;
+        // height: 300px;
+        margin-top: 25px;
+
+        .graph_head {
+          @extend .full-body;
+          float: left;
+          margin-bottom: 10px;
+
+          h1 {
+            width: 100%;
+            @extend .font-styles;
+            display: inline-block;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.8px;
+            padding: 1em 0 0.5em;
+            @extend .disable-select;
+            float: left;
+          }
+
+          .option {
+            //    @extend .full-body;
+            float: left;
+            list-style-type: none;
+            margin: 0.5em 0;
+            padding: 0;
+
+            li {
+              list-style: none;
+              display: inline-block;
+              font-family: 'Proxima_Nova', sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              float: left;
+              color: #000;
+              letter-spacing: 0.6px;
+              padding: 8px 15px;
+              margin: 0 1em 0 0;
+              border: 1.5px solid #ccc;
+              @extend .disable-select;
+              opacity: 0.65;
+              cursor: pointer;
+              border-radius: 5px;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+            @include tab{
+              li{
+                margin: 0 1em 1em 0;
+              }
+            }
+
+            .line {
+              position: relative;
+              float: left;
+              //  margin-top: 10px;
+            }
+
+            .activee {
+              opacity: 1 !important;
+              border: 1.5px solid $blue!important;
+            }
+          }
+        }
+
+        .course {
+          @extend .full-body;
+          float: left;
+          border-radius: 5px;
+          padding: 25px 0;
+          overflow-y: scroll;
+          background-color: #fff;
+          box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+
+          .course_scroll {
+            @extend .full-body;
+            float: left;
+
+            .assestment_inner {
+              display: none;
+            }
+
+            .assestment_inner,
+            .course_inner {
+              @extend .full-body;
+              float: left;
+
+              .assest_scroll {
+                @extend .full-body;
+                float: left;
+                width: 90%;
+                left: 5%;
+              }
+
+              .quest {
+                @extend .full-body;
+                float: left;
+                margin: 0 0 15px;
+              }
+
+              h1 {
+                width: 100%;
+                @extend .font-styles;
+                display: inline-block;
+                font-family: 'Proxima_Nova', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: left;
+                color: #000;
+                letter-spacing: 0.8px;
+                padding: 1em 0 2em;
+                @extend .disable-select;
+                float: left;
+              }
+
+              p {
+                @extend .font-styles;
+                font-family: 'Muli', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                color: #000;
+                letter-spacing: 0.6px;
+              }
+
+              .anss {
+                @extend .font-styles;
+                font-family: 'Muli', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: left;
+                color: #000;
+                height: 200px;
+                width: 95%;
+                left: 2.5%;
+                outline: 0;
+                position: relative;
+                border: 1.5px solid #ccc;
+                letter-spacing: 0.6px;
+                padding: 0.5em;
+                margin: 30px 0;
+                @extend .disable-select;
+                float: left;
+              }
+
+              .option {
+                @extend .full-body;
+                float: left;
+                list-style-type: none;
+                margin: 15px 0 5px;
+                padding: 0;
+                width: 95%;
+                left: 2.5%;
+
+                li {
+                  width: 50%;
+                  list-style: none;
+                  display: inline-block;
+                  font-family: 'Proxima_Nova', sans-serif;
+                  font-size: 16px;
+                  font-weight: 400;
+                  float: left;
+                  color: #000;
+                  letter-spacing: 0.6px;
+                  padding: 8px 0;
+                  margin: 5px 0;
+                  @extend .disable-select;
+                  text-align: left;
+
+                  input {
+                    outline: 0;
+                  }
+                }
+
+                .line {
+                  position: relative;
+                  float: left;
+                  //  margin-top: 10px;
+                }
+              }
+
+              .course_con {
+                @extend .full-body;
+                float: left;
+                width: 90%;
+                left: 5%;
+
+                .course_right {
+                  @extend .full-body;
+                  float: left;
+                  width: 20%;
+                  padding-top: 15px;
+
+                  img {
+                    width: 13px;
+                    vertical-align: middle;
+                  }
+
+                  p {
+                    @extend .font-styles;
+                    display: inline-block;
+                    font-family: 'Muli', sans-serif;
+                    font-size: 10px;
+                    font-weight: 600;
+                    text-align: left;
+                    color: #000;
+                    letter-spacing: 0.6px;
+                  }
+                }
+
+                .course_left {
+                  @extend .full-body;
+                  float: left;
+                  width: 80%;
+
+                  h1 {
+                    width: 100%;
+                    @extend .font-styles;
+                    display: inline-block;
+                    font-family: 'Proxima_Nova', sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: left;
+                    color: #000;
+                    letter-spacing: 0.6px;
+                    padding: 1em 0 0.5em;
+                    @extend .disable-select;
+                    float: left;
+                  }
+
+                  p {
+                    @extend .font-styles;
+                    display: inline-block;
+                    font-family: 'Muli', sans-serif;
+                    font-size: 13.5px;
+                    font-weight: 500;
+                    text-align: left;
+                    color: #000;
+                    letter-spacing: 0.6px;
+                    padding: 1em 0 0.5em;
+                    @extend .disable-select;
+                    float: left;
+                  }
+
+                  video {
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 25px;
+                  }
+
+                  .buttons {
+                    @extend .full-body;
+                    float: left;
+                    padding: 20px 0;
+
+                    .pen {
+                      background-color: $green !important;
+                      color: #fff !important;
+                      border: none !important;
+                      box-shadow: 0 2px 6px 0 rgba(18,83,164,0.25);
+                    }
+
+                    .btn {
+                      @extend .font-styles;
+                      display: inline-block;
+                      font-family: 'Muli', sans-serif;
+                      font-size: 10px;
+                      font-weight: 500;
+                      text-align: left;
+                      color: #000;
+                      letter-spacing: 0.6px;
+                      padding: 8px 12px;
+                      margin-right: 1.2em;
+                      @extend .disable-select;
+                      float: left;
+                      cursor: pointer;
+                      background-color: #fff;
+                      border-radius: 100px;
+                      border: 1px solid #bbb;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .txt {
+          @extend .full-body;
+          float: left;
+          widows: 50%;
+          padding: 10px 0 0;
+
+          h2 {
+            width: 80%;
+            left: 8%;
+            position: relative;
+            @extend .font-styles;
+            display: inline-block;
+            font-family: 'Open sans', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            letter-spacing: 0.6px;
+            padding: 0.8em 0 0.5em;
+            margin-left: 1em;
+            @extend .disable-select;
+            float: left;
+
+            .box {
+              width: 10px;
+              height: 10px;
+              border-radius: 2.5px;
+              background-color: $blue;
+              border: 1px solid $ip_bod;
+              float: left !important;
+              margin: 2px 10px 0 0;
+            }
+
+            .gray {
+              background-color: #f5f5f5;
+            }
+
+            span {
+              color: $blue;
+              font-weight: 600;
+              float: right;
+            }
+
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      @include ipadp {
+        .graph_infodetails {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include ipadp{
+  .main_dashboardcontainer{
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

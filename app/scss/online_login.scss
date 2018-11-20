@@ -1,0 +1,17 @@
+@import "preset";
+@import "mixins";
+@import "online_login/header";
+
+
+
+
+
+#main_wrapper {
+    @extend .full-body;
+    background-color: $back-blue;
+    @import "online_login/login";
+}
+
+
+
+

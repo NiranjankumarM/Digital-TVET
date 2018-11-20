@@ -1,0 +1,444 @@
+.elongate {
+  width: calc(100% - 80px) !important;
+  left: 80px !important;
+}
+
+.main_dashboardcontainer {
+  @extend .full-body;
+  width: calc(100% - 250px);
+  left: 250px;
+  float: left; //  top: 80px;
+  z-index: -50;
+  background-color: $back-blue;
+  padding: 35px 0 25px;
+
+  .dashboard_graphbox {
+    @extend .full-body;
+    float: left;
+
+    .over {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 250px;
+      background-color: $dark-blue;
+    }
+
+    .dash_infocontainer {
+      @extend .full-body;
+      float: left;
+      width: 97%;
+      left: 1.5%;
+      margin: 15px 0 0;
+
+      .graph_head {
+        @extend .full-body;
+        float: left;
+        margin-bottom: 10px;
+
+        h1 {
+          left: 1%;
+          position: relative;
+          @extend .font-styles;
+          display: inline-block;
+          font-family: 'Proxima_Nova', sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          text-align: left;
+          color: #000;
+          letter-spacing: 0.8px;
+          padding: 1em 0 0.5em;
+          @extend .disable-select;
+          float: left;
+        }
+      }
+
+      .dash_infobox_one {
+        margin-left: 15px;
+      }
+
+      .infobox {
+        @extend .full-body;
+        float: left;
+        width: 100%;
+        left: 0;
+        //margin-right: 15px;
+        padding: 3% 0;
+        cursor: pointer;
+        //
+        // &:hover{
+        //   box-shadow: 0 10px 20px 0 rgba(18,83,164,0.25);
+        // }
+        .course_bottom {
+          @extend .full-body;
+          float: left;
+
+          .course {
+            @extend .full-body;
+            float: left;
+            width: 33.33%;
+            margin-bottom: 50px;
+
+            .inner {
+              @extend .full-body;
+              float: left;
+              width: 85%;
+              left: 5%;
+              cursor: pointer;
+              overflow: hidden;
+              border-radius: 5px;
+              box-shadow: 0 5px 10px 0 rgba(0,0,0, 0.15);
+
+              &:hover {
+                box-shadow: 0 20px 30px 0 rgba(0,0,0, 0.15);
+              }
+
+              .top {
+                @extend .full-body;
+                float: left;
+
+                img {
+                  width: 100%;
+                  border-radius: 5px;
+                  border-bottom-left-radius: 0;
+                  border-bottom-right-radius: 0;
+                  -webkit-transition: all 0.2s ease-in-out;
+                  -moz-transition: all 0.2s ease-in-out;
+                  -o-transition: all 0.2s ease-in-out;
+                  -ms-transition: all 0.2s ease-in-out;
+                }
+
+                .sharee {
+                  width: 25px;
+                  top: 12.5px;
+                  right: 15px;
+                  position: absolute;
+                  cursor: pointer;
+
+                  img {
+                    width: 25px;
+                    margin-top: 10px;
+                    position: relative;
+                  }
+                }
+
+                .limit {
+                  position: absolute;
+                  top: 15px;
+                  width: 20%;
+                  padding: 5px 0;
+                  left: -3.5px;
+                  border-radius: 3.5px;
+                  right: 0;
+                  background-color: #fff;
+                  box-shadow: 0 0 15px 2px rgba(0,0,0,0.15);
+
+                  &:after {
+                    left: 96%;
+                    top: 50%;
+                    border-radius: 3.5px;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(136, 183, 213, 0);
+                    border-left-color: #fff;
+                    border-width: 16.5px;
+                    margin-top: -16px;
+                  }
+
+                  p {
+                    @extend .font-styles;
+                    font-size: 12px;
+                    position: relative;
+                    font-family: 'Muli',sans-serif;
+                    font-weight: 700;
+                    letter-spacing: 0.9px;
+                    color: #000;
+                    text-align: center;
+                    line-height: 1.7;
+                  }
+                }
+              }
+
+              .bottom {
+                @extend .full-body;
+                float: left;
+                background-color: #fff;
+
+                .one {
+                  @extend .full-body;
+                  float: left;
+                  padding: 10px 0;
+                  background-color: $violet;
+
+                  p {
+                    @extend .font-styles;
+                    font-size: 14px;
+                    position: relative;
+                    font-family: 'Muli',sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 0.9px;
+                    color: #fff;
+                    width: 90%;
+                    left: 5%;
+                    text-align: center;
+                    line-height: 1.7;
+                  }
+                }
+
+                .second {
+                  width: 90%;
+                  left: 5%;
+                  @extend .full-body;
+                  padding: 20px 0 10px;
+                  float: left;
+                  background-color: #fff;
+
+                  p {
+                    @extend .font-styles;
+                    font-size: 10.5px;
+                    position: relative;
+                    font-family: 'Muli',sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 0.9px;
+                    text-align: center;
+                    color: #000;
+                  }
+
+                  .date {
+                    width: 35% !important;
+                    @include ipadp {
+                      .daat {
+                        font-size: 10px;
+                      }
+                    }
+                  }
+
+                  .sec_left {
+                    @extend .full-body;
+                    float: left;
+                    width: 65%;
+
+                    .sec_left_con {
+                      @extend .full-body;
+                      float: left;
+
+                      .image {
+                        @extend .full-body;
+                        float: left;
+                        width: 30%;
+
+                        .ima1 {
+                          background-image: url("../../../media/trainer1.jpg");
+                        }
+
+                        .ima2 {
+                          background-image: url("../../../media/trainer2.jpg");
+                        }
+
+                        .ima3 {
+                          background-image: url("../../../media/trainer3.jpg");
+                        }
+
+                        .ima4 {
+                          background-image: url("../../../media/trainer4.jpg");
+                        }
+
+                        .ima5 {
+                          background-image: url("../../../media/trainer5.jpg");
+                        }
+
+                        .ima6 {
+                          background-image: url("../../../media/trainer.jpg");
+                        }
+
+                        .ima {
+                          width: 50px;
+                          height: 50px;
+                          border-radius: 100px;
+                          background-repeat: no-repeat;
+                          background-size: cover;
+                          background-position: center;
+                        }
+                        @include tab {
+                          .ima {
+                            width: 40px;
+                            height: 40px;
+                          }
+                        }
+                      }
+
+                      .con {
+                        @extend .full-body;
+                        float: left;
+                        width: 55%;
+                        left: 5%;
+
+                        h1 {
+                          @extend .font-styles;
+                          font-size: 15px;
+                          position: relative;
+                          font-family: 'Muli',sans-serif;
+                          font-weight: 800;
+                          letter-spacing: 0.9px;
+                          color: #000;
+                          text-align: left;
+                          line-height: 1.7;
+                        }
+
+                        p {
+                          @extend .font-styles;
+                          font-size: 10.5px;
+                          position: relative;
+                          font-family: 'Muli',sans-serif;
+                          font-weight: 800;
+                          letter-spacing: 0.9px;
+                          color: #000;
+                          text-align: left;
+                          line-height: 1.7;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .three {
+                  @extend .full-body;
+                  float: left;
+                  left: 6.5%;
+                  padding: 10px 0 20px;
+
+                  p {
+                    width: 90%;
+                    @extend .font-styles;
+                    font-size: 12.5px;
+                    position: relative;
+                    font-family: 'Muli',sans-serif;
+                    font-weight: 500;
+                    letter-spacing: 0.6px;
+                    color: #000;
+                    text-align: left;
+                    line-height: 1.7;
+                    word-wrap: break-word;
+                  }
+                }
+
+                .four {
+                  @extend .full-body;
+                  float: left;
+                  background-color: #fff;
+                  border-top: 1px solid #d3d3d3;
+                  border-bottom: 1px solid #f5f5f5;
+
+                  .four_one {
+                    @extend .full-body;
+                    float: left;
+                    padding: 10px 0;
+                    width: 33.33%;
+                    border-right: 1px solid #f5f5f5;
+
+                    img {
+                      width: 15px;
+                      opacity: 0.5;
+                    }
+
+                    p {
+                      @extend .font-styles;
+                      font-size: 13px;
+                      position: relative;
+                      font-family: 'Muli',sans-serif;
+                      font-weight: 500;
+                      letter-spacing: 0.9px;
+                      color: #000;
+                      text-align: center;
+                      line-height: 1.7;
+                    }
+                  }
+                }
+
+                .five {
+                  @extend .full-body;
+                  float: left;
+                  padding: 15px 0;
+                  background-color: #fff;
+                  border-top: 1px solid #d3d3d3;
+                  border-bottom: 1px solid #f5f5f5;
+
+                  #demo,
+                  #demo11,
+                  #demo2,
+                  #demo21,
+                  #demo3,
+                  #demo31,
+                  #demo4,
+                  #demo41,
+                  #demo5,
+                  #demo51,
+                  #demo6 {
+                    float: left;
+                    margin-left: 22.5px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    opacity: 0.85;
+                    text-align: left;
+                    margin-bottom: 0;
+                  }
+
+                  .share {
+                    @extend .font-styles;
+                    font-size: 12.5px;
+                    position: relative;
+                    font-family: 'Muli',sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 0.9px;
+                    text-align: center;
+                    float: right;
+                    margin-right: 15px;
+                    display: inline-block;
+                    line-height: 1.7;
+                    cursor: pointer;
+                    background-color: $violet;
+                    color: #fff;
+                    padding: 6px 15px;
+                    border-radius: 3px;
+                  }
+                }
+              }
+            }
+            @include mob-c {
+              .inner {
+                width: 95%;
+                left: 2.5%;
+              }
+            }
+          }
+          @include ipadp {
+            .course {
+              width: 100%;
+            }
+          }
+          @include mob-c {
+            .course {
+              width: 100%;
+            }
+          }
+        }
+      }
+      @include ipadp {
+        .infobox {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+@include ipadp {
+  .main_dashboardcontainer {
+    width: calc(100% - 80px) !important;
+    left: 80px !important;
+  }
+}

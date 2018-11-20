@@ -1,0 +1,560 @@
+.contact_header {
+  @extend .full-body;
+  float: left;
+  position: relative;
+  vertical-align: middle;
+
+  .cont_hold {
+    float: right;
+    width: 100%;
+    z-index: 4500;
+    padding: 0.65% 0;
+    text-align: right;
+    background-color: $violet;
+    @extend .full-body;
+
+    .holddd {
+      @extend .full-body;
+      width: 90%;
+      float: left;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    .mobhh {
+      padding: 0;
+    }
+
+    .hh {
+      padding: 0 1% !important;
+    }
+
+    .so {
+      padding: 0 1% 0 0 !important;
+    }
+
+    a {
+      @extend .font-styles;
+      font-family: 'muli', sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-align: right;
+      letter-spacing: 0.9px;
+      padding: 0;
+      color: #fff;
+      vertical-align: middle;
+
+      span {
+        img {
+          width: 16px;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
+    }
+    @include ipadp {
+      a {
+        font-size: 12px;
+        padding-left: 2.5%;
+      }
+
+      .ipadp {
+        display: none;
+      }
+    }
+    @include mob-c {
+      a {
+        margin: 10px 0;
+        font-size: 11px;
+      }
+
+      .ipadp {
+        display: none;
+      }
+    }
+    @include mob-c {
+      .con {
+        display: none;
+      }
+    }
+    /*.splitline{
+      margin-left: 10px;
+    }*/
+  }
+  @include deskmed {
+    .cont_hold {
+      width: 100%;
+      padding: 5px 0;
+      margin-right: 0;
+    }
+  }
+  @include tab {
+    .cont_hold {
+      margin-right: 0;
+    }
+  }
+  @include mob-c {
+    .cont_hold {
+      padding: 2.2% 0;
+    }
+  }
+}
+@include mob-c {
+  .contact_header {
+    height: 45px;
+  }
+}
+
+header {
+  @extend .full-body;
+  height: auto;
+  background-color: #fff;
+  z-index: 4000;
+  position: fixed;
+  top: 40px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.15);
+
+  .main_navigation {
+    @extend .full-body;
+    width: 95%;
+    left: 2.5%;
+    float: left;
+
+    .logo_holder {
+      left: 0;
+      float: left;
+      padding-top: 35px;
+      text-align: left;
+      position: relative;
+
+      img {
+        width: 180px;
+      }
+      @include tab {
+        img {
+          width: 150px;
+        }
+      }
+      @include ipadp {
+        img {
+          width: 130px;
+        }
+      }
+      @include mob-c {
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+    @include mob-c {
+      .logo_holder {
+        padding-top: 20px;
+      }
+    }
+
+    .mob_navigation {
+      display: none;
+      width: 48%;
+      //  right: 5.5%;
+      float: right;
+      text-align: right;
+      padding: 1em 0;
+      position: relative;
+
+      .butmenu {
+        @extend .font-styles;
+        //width: 50%;
+        position: relative;
+        background-color: $violet;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        border: none;
+        color: #fff;
+        display: inline-block;
+        font-family: 'muli', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 6px 15px;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        text-decoration: none;
+        outline: 0;
+
+        span {
+          vertical-align: middle;
+        }
+      }
+
+      .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: white;
+        animation: ripple-animation 2s;
+      }
+      @keyframes ripple-animation {
+        from {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+
+        to {
+          transform: scale(100);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes ripple-animation {
+        from {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+
+        to {
+          transform: scale(100);
+          opacity: 0;
+        }
+      }
+    }
+    @include ipadp{
+      .mob_navigation {
+        display: block;
+        width: 10%;
+        padding: 2em 0;
+      }
+    }
+        @include mob-c {
+      .mob_navigation {
+        display: block;
+      }
+    }
+
+    .navigation {
+      float: left;
+      position: relative;
+      padding: 10px 0 0;
+
+      .nav_menu {
+        padding: 1.8em 1em;
+        list-style: none;
+        display: inline-block;
+        margin: 0;
+        float: left;
+
+        li {
+          float: left;
+          margin: 0 15px 0 20px;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+
+          a {
+            width: 100%;
+            @extend .font-styles;
+            font-size: 14px;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+            padding: 0 0 2.5px;
+            color: $dark-blue;
+
+            &:hover {
+              border-bottom: 1.5px solid $violet;
+            }
+          }
+          @include ipadp {
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+         @include tab {
+          li {
+            margin: 0 10px;
+          }
+        }
+        @include ipadp {
+          li {
+            margin: 0 10px;
+          }
+        }
+      }
+      @include tab {
+        .nav_menu {
+          padding: 1.8em 0.25em;
+        }
+      }
+      @include ipadp {
+        .nav_menu {
+          padding: 0.4em 1em 0 0;
+        }
+      }
+    }
+    @include ipadp {
+      .navigation {
+        padding: 25px 35px 0;
+        display: none;
+      }
+    }
+    @include mob-c {
+      .navigation {
+        display: none;
+      }
+    }
+
+    .right-menu {
+      float: right;
+      padding: 0;
+      margin: 0;
+
+      .client_holder {
+        float: right;
+        padding: 0;
+        margin: 0;
+
+        .txt {
+          @extend .full-body;
+          float: left;
+          width: auto;
+          margin: 1em 1em 1em 0;
+
+          .se {
+            position: absolute;
+            top: 20px;
+            left: 16px;
+
+            img {
+              width: 20px;
+              vertical-align: middle;
+            }
+          }
+
+          input[type="search"] {
+            float: left;
+            width: 300px;
+            border: 1px solid #aaa;
+            border-radius: 100px;
+            @extend .font-styles;
+            font-family: 'Muli', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: left;
+            color: #000;
+            outline: 0;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            @extend .disable-select;
+            margin: 0.9em 0;
+            padding: 1.25em 1.25em 1.25em 4em;
+          }
+          @include tab{
+             input[type="search"]{
+              width: 200px;
+             }
+          }
+
+          .notification-trigger{
+            width: 35px;
+            margin: 0.65em 0 0 0;
+            cursor: pointer;
+          }
+
+          .user_image {
+            width: 35px;
+            height: 35px;
+            background-color: #eee;
+            border-radius: 50px;
+            background-image: url("../../../media/online/author.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: left;
+            margin: 0.65em 0 0 1em;
+          }
+
+          p {
+            float: left;
+            @extend .font-styles;
+            font-family: 'Proxima_Nova', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            text-align: right;
+            color: #000;
+            letter-spacing: 1px;
+            vertical-align: middle;
+            @extend .disable-select;
+            margin: 0.9em 0;
+
+            span{
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include deskmed {
+    .main_navigation {
+      width: 95%;
+      left: 2.5%;
+    }
+  }
+  @include mob-c {
+    .main_navigation {
+      height: 60px;
+    }
+  }
+}
+@include tab {
+  header {
+    top: 32px !important;
+  }
+}
+@include ipadp {
+  header {
+    top: 30px !important;
+  }
+}
+@include mob-c {
+  header {
+    height: 65px;
+  }
+}
+
+.sub_menumob {
+//  opacity: 0;
+  position: fixed;
+  z-index: 5000;
+  width: 100vw;
+  height: 100vh;
+  top: -2000px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .sub_close {
+    position: absolute;
+    top: 4.5%;
+    right: 5%;
+    opacity: 0.75;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: #fbfbfb;
+    opacity: 0.97;
+    z-index: -10;
+  }
+
+  .butstart {
+    @extend .font-styles;
+    width: 85%;
+    left: 7.5%;
+    position: absolute;
+    bottom: 80px;
+    background-color: $blue;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: 'muli', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 12px 18px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    outline: 0;
+
+    img {
+      width: 18px;
+    }
+  }
+  @include mob-c {
+    .butstart {
+      font-size: 14px;
+    }
+  }
+
+  .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    animation: ripple-animation 2s;
+  }
+  @keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+  }
+
+  .mob_list {
+    @extend .full-body;
+    float: left;
+    padding: 0;
+    z-index: 100;
+
+    ul {
+      @extend .full-body;
+      width: 100%;
+      margin-top: 15%;
+
+      li {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+        padding: 4% 0;
+
+        a {
+          width: 100%;
+          @extend .font-styles;
+          text-align: center;
+          font-size: 16px;
+          font-family: 'muli', sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          color: $black;
+
+          &:hover {
+            color: $violet;
+          }
+        }
+        @include mob-c {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mob-s {
+  .sub_menumob {
+    padding: 5% 0;
+  }
+}
